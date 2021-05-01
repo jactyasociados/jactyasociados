@@ -1,0 +1,51 @@
+<html>
+<head></head>
+<body>
+
+<form>
+  <fieldset>
+    <legend>Billing</legend>
+    <input type="text" name="first_name" />
+    <input type="text" name="last_name" />
+    <input type="text" name="billing_address_1" />
+    <input type="text" name="billing_address_2" />
+    <input type="text" name="billing_city" />
+    <input type="text" name="billing_state" />
+    <input type="text" name="billing_zip" />
+    <select name="billing_country">
+      <option value="...">...</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Shipping</legend>
+    <label><input type="checkbox" id="same_as_billing" /> Same as billing</label>
+    <input type="text" name="shipping_first_name" />
+    <input type="text" name="shipping_last_name" />
+    <input type="text" name="shipping_address_1" />
+    <input type="text" name="shipping_address_2" />
+    <input type="text" name="shipping_city" />
+    <input type="text" name="shipping_state" />
+    <input type="text" name="shipping_zip" />
+    <select name="shipping_country">
+      <option value="...">...</option>
+    </select>
+  </fieldset>
+</form>
+<script src="js/jquery.js"></script>
+<script>
+  $("#same_as_billing").on("change", function(){
+    if (this.checked) {
+      $("[name='shipping_first_name']").val($("[name='first_name']").val());
+      $("[name='shipping_last_name']").val($("[name='last_name']").val());
+      $("[name='shipping_address_1']").val($("[name='billing_address_1']").val());
+      $("[name='shipping_address_2']").val($("[name='billing_address_2']").val());
+      $("[name='shipping_city']").val($("[name='billing_city']").val());
+      $("[name='shipping_state']").val($("[name='billing_state']").val());
+      $("[name='shipping_zip']").val($("[name='billing_zip']").val());
+      $("[name='shipping_country']").val($("[name='billing_country']").val());
+    }
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src="js/jquery.js" ></script>
+</head>
+<body>
+    <form>
+        <input type="text" name="startdate" id="startdate" value=""/>
+        <input type="text" name="enddate" id="enddate" value=""/>
+        <input type="checkbox" name="checker" id="checker" />
+    </form>
+    <script>
+    $(document).ready(function(){
+            $("input#checker").bind("click",function(o){
+                if($("input#checker:checked").length){
+                    $("#enddate").val($("#startdate").val());
+                }else{
+                    $("#enddate").val("");
+                }
+            });
+    });
+    </script>
+</body>
+</html>

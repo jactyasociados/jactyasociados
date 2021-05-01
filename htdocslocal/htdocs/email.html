@@ -1,0 +1,59 @@
+<html><head> 
+            </head> 
+            <body style='font-family: Arial, Helvetica, Verdana; font-size: 14px;'> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px;'> 
+            <tr> 
+            <td style='vertical-align: top;' width='50%'> 
+            <img src='https: found_image_data.image_url ' alt='Logo'> 
+            </td> 
+            <td style='vertical-align: top; text-align:right;' width='50%'> 
+            <span style='text-align:right;'> found_profile_data.businessname </span><br /> 
+            <span style='text-align:right;'> found_profile_data.email </span><br /> 
+            <span style='text-align:right;'> found_profile_data.ein </span><br /> 
+            <span style='text-align:right;'> found_profile_data.address1 </span>
+            </td> 
+            </tr> 
+            </table> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px;' id='header_content'> 
+            <tr> 
+            <td style='width=50%'> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 20px;'><tr><td style='width=100%'><strong>Billing Address</strong></td></tr></table> 
+            </td> 
+            <td style='width=50%'> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 20px;'><tr><td style='width=100%'><strong>Shipping Address</strong></td></tr></table> 
+            </td> 
+            </tr></table> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%'> 
+            <tr> 
+            <td style='width=50%'> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px;'><tr><td style='width=100%'><span> found_invoice_data.businessname </span><br /> 
+            <span> found_invoice_data.email </span><br /> 
+            <span> found_invoice_data.ein </span><br /> 
+            <span> found_invoice_data.address </span>
+            </td></tr></table> 
+            </td> 
+            <td style='width=50%'> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px;'><tr><td style='width=100%'><span> found_invoice_data.businessname_shipping </span><br /> 
+            <span> found_invoice_data.email_shipping </span><br /> 
+            <span> found_invoice_data.ein_shipping </span><br /> 
+            <span> found_invoice_data.address_shipping </span>
+            </td></tr></table> 
+            </td> 
+            </tr> 
+            </table> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px; margin-top:20px;'> 
+            <tr><td style='width: 33%'><strong>Invoice Date:</strong>&nbsp; str(found_invoice_data.invoice_date) +"</td><td style='width: 33%'><strong>Invoice Number</strong>&nbsp; found_invoice_data.invoice_number </td><td style='width: 33%'><strong>Taxes</strong>&nbsp; found_invoice_data.taxes </td></tr>
+            </table> 
+            <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px; margin-top:20px;'>
+              <tr><td style='width: 25%'><span><strong>Description</strong><br /> item.item_desc +"</span></td><td style='width: 25%'><span><strong>Price</strong><br /> str(item.item_price) </span></td><td style='width: 25%'><span><strong>Quantity</strong><br /> str(item.item_quant) </span></td><td style='width: 25%'><span><strong>Total</strong><br /> str(item.amount) </span></td></tr>
+              </table>
+              <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px; margin-top:20px;'> 
+            <tr><td style='width: 50%'><p></p></td><td style='width: 50%'><table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px; margin-top:20px;'>
+              <tr><td style='width: 50%'><strong>Subtotal</strong></td><td style='width:[] 50%'> str(found_invoice_values.subtotal) </td></tr></table>
+              
+              <table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px; margin-top:20px;'> \
+            <tr><td style='width: 50%'><p></p></td><td style='width: 50%'><table border='0' cellspacing='5' cellpadding='5' width='100%' style='font-family: Arial, Helvetica, Verdana; font-size: 14px; margin-top:20px;'>
+              
+              <tr><td style='width: 50%'><strong>Subtotal</strong></td><td style='width:[] 50%'> str(found_invoice_values.subtotal) </td></tr>
+              
+              </td></tr></table></table></body></html>

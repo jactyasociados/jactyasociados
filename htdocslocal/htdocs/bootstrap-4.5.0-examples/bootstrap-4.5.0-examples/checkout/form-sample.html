@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+$('.add_new_field').on('blur', '.EstmTotal, .PCount', function() {
+  $(this).closest('.row').each(function() {
+    var pcCount = parseFloat($(this).find('.PCount', this).val());
+    var estTotal = parseFloat($(this).find('.EstmTotal', this).val());
+
+    if (typeof pcCount === 'number' && pcCount && typeof estTotal === 'number' && estTotal) {
+      var calculatedValue = pcCount * estTotal;
+      calculatedValue = Math.round(calculatedValue * 100) / 100;
+      $(this).find('.Amount').text(calculatedValue);
+    } else {
+      $(this).find('.Amount').text('');
+    }
+  });
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="add_new_field">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="col-form-label"> Enter Product Name</label>
+        <input type="text" class="form-control" name="pname[]" placeholder="Product Name" />
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-group">
+        <label class="col-form-label"> No. of Pieces</label>
+        <input type="text" class="form-control PCount" name="pcount[]" placeholder="No.Of Items" />
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="col-form-label"> Estimated Amount</label>
+        <input type="text" class="form-control EstmTotal" name="estamount[]" placeholder="Estimated Amount of Each" />
+      </div>
+      <p>Amount: <span class="Amount"></span></p>
+    </div>
+    <!--<div class="col-md-1 removebtn"><a href="#" class="remove_field"><i class="fa fa-remove"></i></a></div>-->
+
+  </div>
+</div>
+
+<button class="add_another_product">Add another Product <i class="fa fa-plus"></i></button>
+</body>
+</html>

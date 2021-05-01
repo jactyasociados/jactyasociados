@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>form</title>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".price").keyup(function() {
+        var grandTotal = 0;
+        $("input[name='qty[]']").each(function (index) {
+            var qty = $("input[name='qty[]']").eq(index).val();
+            var price = $("input[name='price[]']").eq(index).val();
+            var output = parseInt(qty) * parseInt(price);
+
+            if (!isNaN(output)) {
+                $("input[name='output[]']").eq(index).val(output);
+                grandTotal = parseInt(grandTotal) + parseInt(output);
+                $('#gran').val(grandTotal);
+            }
+        });
+    });
+});
+
+</script>
+
+</head>
+<body>
+
+
+
+<table style="border:1px solid purple">
+    <tr>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td><input class="qty" type="text" name="qty[]"></td>
+        <td><input class="price" type="text" name="price[]"></td>
+        <td><input class="output" type="text" name="output[]"></td>
+    </tr>
+    <tr>
+        <td><input class="qty" type="text" name="qty[]"></td>
+        <td><input class="price" type="text" name="price[]"></td>
+        <td><input class="output" type="text" name="output[]"></td>
+    </tr>
+    <tr>
+        <td><input class="qty" type="text" name="qty[]"></td>
+        <td><input class="price" type="text" name="price[]"></td>
+        <td><input class="output" type="text"  name="output[]"></td>
+    </tr>
+</table>
+<div id="grand">
+Grand Total:<input type="text" name="gran" id="gran">
+</div>
+</body>
+</html>

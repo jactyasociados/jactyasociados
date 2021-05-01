@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <br />
+    <br />
+    <h2 align="center">title</h2>
+    <div class="form-group">
+      <form name="add_name" id="add_name">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="articles">
+            <tr class="rrjeshta">
+
+              <td><input value=0 type="number" id="quantity-0" name="quantity[]" placeholder="quantity" class="form-control name_list" /></td>
+              <td><input value=0 type="number" id="price-0" name="price[]" placeholder="price" class="form-control name_list" /></td>
+
+              <td><input type="number" id="total-0" name="total[]" placeholder="total" class="form-control name_list" readonly /></td>
+              <td><button type="button" name="add" id="add" class="btn btn-success">Add new</button></td>
+            </tr>
+          </table>
+          <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

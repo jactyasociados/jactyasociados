@@ -1,0 +1,31 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form action="" id="myform">
+<div><span>input taxes as percentage: </span><input type="text" name="taxes"  /></div>
+<p>Item 1</p>
+<div class="row">
+<input type="text" name="item_desc[]"  />
+<input type="text" name="item_price[]" class="item"/>
+<input type="text" name="item_quant[]" class="item"/>
+<input type="text" name="amount[]" class="amount" />
+</div>
+
+<p>Item 2</p>
+<div class="row">
+<input type="text" name="item_desc[]"  />
+<input type="text" name="item_price[]" class="item"/>
+<input type="text" name="item_quant[]" class="item"/>
+<input type="text" name="amount[]" class="amount" />
+</div>
+
+<div><label>Subtotal </label><input type="text" id="subtotal" /></div>
+<div><label>Taxes </label><input type="text" id="totaltax" /></div>
+<div><label>Total </label><input type="text" id="grandtotal" /></div>
+</form>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="array-table.js"></script>
+</body>
+</html>

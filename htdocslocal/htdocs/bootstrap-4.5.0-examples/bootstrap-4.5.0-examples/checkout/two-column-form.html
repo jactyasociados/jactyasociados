@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no9">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="form-validation.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Invoice
+    </h1>
+<form>
+   <div class="row">
+  <form class="form-horizontal">
+    <div class="span6">
+      <fieldset>
+      <legend>Legend text</legend>
+      <div class="control-group">
+        <label class="control-label" for="input01">Text input</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" id="input01">
+          <p class="help-block">Supporting help text</p>
+        </div>
+      </div>
+      </fieldset>
+    </div>
+    <div class="span6">
+      <fieldset>
+        <legend>Legend text</legend>
+        <div class="control-group">
+          <label class="control-label" for="input01">Text input</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="input01">
+            <p class="help-block">Supporting help text</p>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+</div>
+
+    <!-- /.row -->
+    
+    
+    
+    <div class="cloned-row">    
+    <div class="row" style="margin-top:10px;">
+    
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <label for="descrition">Description</label>
+      <input type="text" class="form-control" id="description" name="item_desc[]" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid Description is required. 
+            </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+     <label for="price">Price</label>
+            <input type="text" class="form-control" id="price" name="item_price[]" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid price is required.
+            </div> 
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+     <label for="price">Quantity</label>
+     <input type="text" class="form-control" id="quantity" name="item_quant[]" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid quantity is required.
+            </div> 
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6">
+     <label for="total">Total</label>
+        <input type="text" class="form-control" name="amount[]" value="">
+    </div>    
+ </div>
+</div>
+
+<hr class="mb-4">
+      <!-- Button (Double) -->
+       <div class="row">
+    <div class="col-md-2">
+        <input type="button" class="btn btn-primary btn-sm btn-info" value="add row" id="clone">
+    </div>
+    <div class="col-md-2">
+        <input type="button" class="btn btn-primary btn-sm btn-danger" value="remove row" id="remove">
+    </div>
+</div>
+
+<hr class="mb-4">
+
+<div class="row" style="margin-top:10px;">
+<div class="col-lg-3 col-md-4 col-sm-6">
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6">
+<span>Subtotal</span>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+<input type="text" id="subtotal" name="subtotal" class="form-control" />
+</div>
+</div>
+
+<div class="row" style="margin-top:10px;">
+<div class="col-lg-3 col-md-4 col-sm-6">
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+<span>Taxes</span>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+<input type="text" id="totaltax" name="totaltax" class="form-control" />
+</div>
+</div>
+
+<div class="row" style="margin-top:10px;">
+<div class="col-lg-3 col-md-4 col-sm-6">
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6">
+<span>Total</span>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6">
+<input type="text" id="grandtotal" name="grandtotal" class="form-control" />
+</div>
+</div>
+</form>
+
+</div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+<script src="clone.js"></script>
+<script src="invoice.js"></script>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

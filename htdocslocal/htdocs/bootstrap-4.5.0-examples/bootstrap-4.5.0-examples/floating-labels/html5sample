@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Title</title>
+ </head>
+ <body>
+ <header>
+ <h1>Hello World</h1>
+ </header>
+ <div class="content">
+ </div>
+ <footer>
+ </footer>
+ </body>
+</html>
